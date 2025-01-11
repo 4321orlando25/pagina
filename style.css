@@ -50,7 +50,7 @@ h1 {
 h2 {
     font-family: 'Georgia', serif;
     color: #F9A825; /* Amarillo dorado */
-    margin-top: 30px;
+    margin-top: 20px; /* Menos espacio entre el título y el texto */
     animation: fadeIn 1s forwards;
     animation-delay: 0.4s;
 }
@@ -69,26 +69,23 @@ p {
     font-size: 18px;
     color: #EAEAEA; /* Blanco suave para texto */
     line-height: 1.6;
+    margin-bottom: 15px; /* Menos espacio después de los párrafos */
     animation: fadeIn 1s forwards;
     animation-delay: 0.8s;
 }
 
 /* Estilos para los botones */
 .button {
-    padding: 15px 30px;
+    padding: 12px 25px; /* Menos espacio de padding */
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
+    margin: 8px; /* Menos espacio entre los botones */
     text-decoration: none;
     color: white;
     background: linear-gradient(#F9A825, #FF4081); /* Gradiente */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-public-key {
-    background-color: #FF4081; /* Rosa brillante */
 }
 
 /* Efecto hover y accesibilidad en botones */
@@ -187,10 +184,12 @@ footer {
     padding: 20px;
     animation: fadeIn 1s forwards;
 }
+
+/* Estilos para botones de redes sociales */
 .social-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px; /* Más separación entre los botones */
     margin-top: 20px;
 }
 
