@@ -1,10 +1,3 @@
-/* Reset de márgenes y rellenos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Estilos generales para la página */
 body {
     font-family: Arial, sans-serif;
@@ -28,10 +21,7 @@ body {
 /* Animación de desvanecimiento */
 .fade-in {
     opacity: 0;
-    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
-    -moz-animation: fadeIn 1s forwards;    /* Firefox */
-    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
-    animation: fadeIn 1s forwards;          /* Modern browsers */
+    animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
@@ -45,9 +35,6 @@ h1 {
     font-family: 'Arial Black', sans-serif;
     color: #F9A825; /* Amarillo dorado */
     margin-bottom: 20px;
-    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
-    -moz-animation: fadeIn 1s forwards;    /* Firefox */
-    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 0.2s;
 }
@@ -57,9 +44,6 @@ h2 {
     font-family: 'Georgia', serif;
     color: #F9A825; /* Amarillo dorado */
     margin-top: 30px;
-    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
-    -moz-animation: fadeIn 1s forwards;    /* Firefox */
-    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 0.4s;
 }
@@ -69,9 +53,6 @@ h3 {
     font-family: 'Courier New', monospace;
     color: #FF4081; /* Rosa brillante */
     margin-top: 20px;
-    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
-    -moz-animation: fadeIn 1s forwards;    /* Firefox */
-    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 0.6s;
 }
@@ -81,76 +62,69 @@ p {
     font-size: 18px;
     color: #EAEAEA; /* Blanco suave para texto */
     line-height: 1.6;
-    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
-    -moz-animation: fadeIn 1s forwards;    /* Firefox */
-    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 0.8s;
 }
 
-/* Estilos para los botones */
+/* Contenedor de botones */
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en la misma línea */
+    gap: 20px; /* Espaciado entre los botones */
+    margin-top: 20px;
+}
+
+/* Botones generales */
 .button {
+    display: inline-block;
     padding: 15px 30px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
     text-decoration: none;
     color: white;
     background-color: #F9A825; /* Amarillo dorado */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    background: -webkit-linear-gradient(#F9A825, #FF4081); /* Safari */
-    background: -moz-linear-gradient(#F9A825, #FF4081);    /* Firefox */
-    background: -o-linear-gradient(#F9A825, #FF4081);      /* Opera */
-    background: linear-gradient(#F9A825, #FF4081);          /* Modern browsers */
 }
 
-/* Botón para descargar la llave pública */
-.btn-public-key {
-    background-color: #FF4081; /* Rosa brillante */
+/* Botón para redes sociales */
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Botón redondo */
+    background-color: #2A3B5C; /* Azul grisáceo oscuro */
+    color: #EAEAEA;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover en los botones */
-.button:hover {
-    background-color: #FF4081; /* Rosa brillante */
-    transform: translateY(-5px) scale(1.05);
+/* Hover en botones */
+.button:hover, .social-button:hover {
+    background-color: #FF4081;
+    transform: translateY(-5px) scale(1.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    -webkit-transform: translateY(-5px) scale(1.05); /* Safari */
-    -moz-transform: translateY(-5px) scale(1.05);    /* Firefox */
-    -ms-transform: translateY(-5px) scale(1.05);     /* Internet Explorer */
-    animation: pulse 0.6s infinite;
 }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
+/* Iconos de redes sociales */
+.social-button i {
+    color: white;
 }
 
-/* Estilos para las imágenes de la fotografía */
-.profile-photo {
-    width: 150px;
-    height: auto;
-    border: 3px solid #FF4081; /* Rosa brillante */
-    border-radius: 5px;
-    transition: transform 0.5s ease, border-color 0.5s ease;
-}
-
-.profile-photo:hover {
-    transform: scale(1.1) rotate(5deg);
-    border-color: #F9A825; /* Amarillo dorado */
+/* Alineación en la página */
+.download-buttons, .social-buttons {
+    margin-top: 30px;
+    text-align: center;
 }
 
 /* Estilos para las imágenes de hobbies */
 .hobbies {
-    display: -webkit-box; /* Para compatibilidad con Safari y algunos navegadores antiguos */
-    display: -moz-box; /* Para compatibilidad con Firefox */
-    display: -ms-flexbox; /* Para Internet Explorer 10 */
-    display: flex; /* Moderno */
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
@@ -161,9 +135,6 @@ p {
     flex: 1 1 200px;
     max-width: 250px;
     text-align: center;
-    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
-    -moz-animation: fadeIn 1s forwards;    /* Firefox */
-    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
 }
 
@@ -179,25 +150,6 @@ p {
     filter: brightness(1.2);
 }
 
-/* Estilos para las imágenes en la sección de criptografía */
-.crypto-image {
-    width: 300px;
-    height: auto;
-    border-radius: 5px;
-    margin: 10px 0;
-    transition: transform 0.5s ease;
-}
-
-.crypto-image:hover {
-    transform: scale(1.1) rotate(-5deg);
-    filter: sepia(0.2);
-}
-
-/* Sección de criptografía */
-.cryptography-section {
-    margin-top: 30px;
-}
-
 /* Pie de página */
 footer {
     margin-top: 50px;
@@ -205,9 +157,6 @@ footer {
     color: #EAEAEA; /* Blanco suave para el pie de página */
     background-color: #0A1A29; /* Azul muy oscuro */
     padding: 20px;
-    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
-    -moz-animation: fadeIn 1s forwards;    /* Firefox */
-    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
 }
