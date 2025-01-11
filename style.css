@@ -1,3 +1,10 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilos generales para la página */
 body {
     font-family: Arial, sans-serif;
@@ -21,7 +28,7 @@ body {
 /* Animación de desvanecimiento */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 1s forwards; /* Animación moderna */
 }
 
 @keyframes fadeIn {
@@ -66,63 +73,44 @@ p {
     animation-delay: 0.8s;
 }
 
-/* Contenedor de botones */
-.buttons-container {
-    display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    flex-wrap: wrap; /* Permite que los botones se ajusten si no caben en la misma línea */
-    gap: 20px; /* Espaciado entre los botones */
-    margin-top: 20px;
-}
-
-/* Botones generales */
+/* Estilos para los botones */
 .button {
-    display: inline-block;
     padding: 15px 30px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 10px;
     text-decoration: none;
     color: white;
-    background-color: #F9A825; /* Amarillo dorado */
+    background: linear-gradient(#F9A825, #FF4081); /* Gradiente */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Botón para redes sociales */
-.social-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%; /* Botón redondo */
-    background-color: #2A3B5C; /* Azul grisáceo oscuro */
-    color: #EAEAEA;
-    font-size: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+.btn-public-key {
+    background-color: #FF4081; /* Rosa brillante */
 }
 
-/* Hover en botones */
-.button:hover, .social-button:hover {
-    background-color: #FF4081;
-    transform: translateY(-5px) scale(1.1);
+/* Efecto hover y accesibilidad en botones */
+.button:hover,
+.button:focus {
+    background-color: #FF4081; /* Rosa brillante */
+    transform: translateY(-5px) scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    outline: 2px solid #F9A825; /* Indicador de foco accesible */
+    animation: pulse 0.6s infinite;
 }
 
-/* Iconos de redes sociales */
-.social-button i {
-    color: white;
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
-/* Alineación en la página */
-.download-buttons, .social-buttons {
-    margin-top: 30px;
-    text-align: center;
-}
-
-/* Estilos para las imágenes de fotografía */
+/* Estilos para las imágenes de la fotografía */
 .profile-photo {
     width: 150px;
     height: auto;
@@ -131,9 +119,11 @@ p {
     transition: transform 0.5s ease, border-color 0.5s ease;
 }
 
-.profile-photo:hover {
+.profile-photo:hover,
+.profile-photo:focus {
     transform: scale(1.1) rotate(5deg);
     border-color: #F9A825; /* Amarillo dorado */
+    outline: 2px solid #FF4081; /* Foco visible */
 }
 
 /* Estilos para las imágenes de hobbies */
@@ -159,9 +149,11 @@ p {
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.hobby-image:hover {
+.hobby-image:hover,
+.hobby-image:focus {
     transform: scale(1.1) rotate(5deg);
     filter: brightness(1.2);
+    outline: 2px solid #F9A825; /* Foco accesible */
 }
 
 /* Estilos para las imágenes en la sección de criptografía */
@@ -173,18 +165,25 @@ p {
     transition: transform 0.5s ease;
 }
 
-.crypto-image:hover {
+.crypto-image:hover,
+.crypto-image:focus {
     transform: scale(1.1) rotate(-5deg);
     filter: sepia(0.2);
+    outline: 2px solid #F9A825; /* Foco accesible */
+}
+
+/* Sección de criptografía */
+.cryptography-section {
+    margin-top: 30px;
 }
 
 /* Pie de página */
 footer {
+    text-align: center;
     margin-top: 50px;
     font-size: 14px;
     color: #EAEAEA; /* Blanco suave para el pie de página */
     background-color: #0A1A29; /* Azul muy oscuro */
     padding: 20px;
     animation: fadeIn 1s forwards;
-    animation-delay: 1s;
 }
