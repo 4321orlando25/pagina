@@ -122,6 +122,20 @@ p {
     text-align: center;
 }
 
+/* Estilos para las imágenes de fotografía */
+.profile-photo {
+    width: 150px;
+    height: auto;
+    border: 3px solid #FF4081; /* Rosa brillante */
+    border-radius: 5px;
+    transition: transform 0.5s ease, border-color 0.5s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1) rotate(5deg);
+    border-color: #F9A825; /* Amarillo dorado */
+}
+
 /* Estilos para las imágenes de hobbies */
 .hobbies {
     display: flex;
@@ -148,6 +162,20 @@ p {
 .hobby-image:hover {
     transform: scale(1.1) rotate(5deg);
     filter: brightness(1.2);
+}
+
+/* Estilos para las imágenes en la sección de criptografía */
+.crypto-image {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: transform 0.5s ease;
+}
+
+.crypto-image:hover {
+    transform: scale(1.1) rotate(-5deg);
+    filter: sepia(0.2);
 }
 
 /* Pie de página */
