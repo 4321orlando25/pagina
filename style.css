@@ -59,7 +59,7 @@ h2 {
 h3 {
     font-family: 'Courier New', monospace;
     color: #FF4081; /* Rosa brillante */
-    margin-top: 500px;
+    margin-top: 20px;
     animation: fadeIn 1s forwards;
     animation-delay: 0.6s;
 }
@@ -78,9 +78,9 @@ p {
     padding: 15px 30px;
     font-size: 16px;
     border: none;
-    border-radius: 100px;
+    border-radius: 5px;
     cursor: pointer;
-    margin: 50px;
+    margin: 10px;
     text-decoration: none;
     color: white;
     background: linear-gradient(#F9A825, #FF4081); /* Gradiente */
