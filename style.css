@@ -187,3 +187,35 @@ footer {
     padding: 20px;
     animation: fadeIn 1s forwards;
 }
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-buttons .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-buttons .button i {
+    font-size: 18px;
+}
+
+.button.facebook {
+    background-color: #3b5998; /* Azul Facebook */
+}
+
+.button.twitter {
+    background-color: #1da1f2; /* Azul Twitter */
+}
+
+.button.instagram {
+    background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285aeb);
+}
+
+.button.linkedin {
+    background-color: #0077b5; /* Azul LinkedIn */
+}
