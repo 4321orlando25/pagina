@@ -78,9 +78,9 @@ p {
     padding: 15px 30px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
-    margin: 10px;
+    margin: 50px;
     text-decoration: none;
     color: white;
     background: linear-gradient(#F9A825, #FF4081); /* Gradiente */
