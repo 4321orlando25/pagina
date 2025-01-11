@@ -1,3 +1,10 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilos generales para la página */
 body {
     font-family: Arial, sans-serif;
@@ -21,7 +28,10 @@ body {
 /* Animación de desvanecimiento */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1s forwards;
+    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
+    -moz-animation: fadeIn 1s forwards;    /* Firefox */
+    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
+    animation: fadeIn 1s forwards;          /* Modern browsers */
 }
 
 @keyframes fadeIn {
@@ -35,6 +45,9 @@ h1 {
     font-family: 'Arial Black', sans-serif;
     color: #F9A825; /* Amarillo dorado */
     margin-bottom: 20px;
+    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
+    -moz-animation: fadeIn 1s forwards;    /* Firefox */
+    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 0.2s;
 }
@@ -44,6 +57,9 @@ h2 {
     font-family: 'Georgia', serif;
     color: #F9A825; /* Amarillo dorado */
     margin-top: 30px;
+    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
+    -moz-animation: fadeIn 1s forwards;    /* Firefox */
+    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 0.4s;
 }
@@ -53,6 +69,9 @@ h3 {
     font-family: 'Courier New', monospace;
     color: #FF4081; /* Rosa brillante */
     margin-top: 20px;
+    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
+    -moz-animation: fadeIn 1s forwards;    /* Firefox */
+    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 0.6s;
 }
@@ -62,6 +81,9 @@ p {
     font-size: 18px;
     color: #EAEAEA; /* Blanco suave para texto */
     line-height: 1.6;
+    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
+    -moz-animation: fadeIn 1s forwards;    /* Firefox */
+    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 0.8s;
 }
@@ -78,6 +100,10 @@ p {
     color: white;
     background-color: #F9A825; /* Amarillo dorado */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    background: -webkit-linear-gradient(#F9A825, #FF4081); /* Safari */
+    background: -moz-linear-gradient(#F9A825, #FF4081);    /* Firefox */
+    background: -o-linear-gradient(#F9A825, #FF4081);      /* Opera */
+    background: linear-gradient(#F9A825, #FF4081);          /* Modern browsers */
 }
 
 /* Botón para descargar la llave pública */
@@ -90,6 +116,9 @@ p {
     background-color: #FF4081; /* Rosa brillante */
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transform: translateY(-5px) scale(1.05); /* Safari */
+    -moz-transform: translateY(-5px) scale(1.05);    /* Firefox */
+    -ms-transform: translateY(-5px) scale(1.05);     /* Internet Explorer */
     animation: pulse 0.6s infinite;
 }
 
@@ -118,7 +147,10 @@ p {
 
 /* Estilos para las imágenes de hobbies */
 .hobbies {
-    display: flex;
+    display: -webkit-box; /* Para compatibilidad con Safari y algunos navegadores antiguos */
+    display: -moz-box; /* Para compatibilidad con Firefox */
+    display: -ms-flexbox; /* Para Internet Explorer 10 */
+    display: flex; /* Moderno */
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
@@ -129,6 +161,9 @@ p {
     flex: 1 1 200px;
     max-width: 250px;
     text-align: center;
+    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
+    -moz-animation: fadeIn 1s forwards;    /* Firefox */
+    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
 }
 
@@ -170,6 +205,9 @@ footer {
     color: #EAEAEA; /* Blanco suave para el pie de página */
     background-color: #0A1A29; /* Azul muy oscuro */
     padding: 20px;
+    -webkit-animation: fadeIn 1s forwards; /* Safari/Chrome */
+    -moz-animation: fadeIn 1s forwards;    /* Firefox */
+    -ms-animation: fadeIn 1s forwards;     /* Internet Explorer */
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
 }
