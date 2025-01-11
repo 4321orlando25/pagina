@@ -1,0 +1,172 @@
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e60101; /* Fondo rojo fuerte */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #ffcccc; /* Fondo rojo claro para el contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Animación de desvanecimiento */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Efecto de desvanecimiento */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Título principal */
+h1 {
+    font-family: 'Arial Black', sans-serif; /* Cambiado a Arial Black */
+    color: #8B0000; /* Rojo oscuro */
+    margin-bottom: 20px; /* Espacio inferior */
+    animation: fadeIn 1s forwards; /* Aplica animación */
+    animation-delay: 0.2s; /* Retardo para el título */
+}
+
+/* Títulos de secciones */
+h2 {
+    font-family: 'Georgia', serif; /* Estilo de letra serif */
+    color: #d9534f; /* Rojo más claro para subtítulos */
+    margin-top: 30px; /* Espacio superior */
+    animation: fadeIn 1s forwards; /* Aplica animación */
+    animation-delay: 0.4s; /* Retardo para subtítulos */
+}
+
+/* Subtítulos en sección de criptografía */
+h3 {
+    font-family: 'Courier New', monospace; /* Estilo de letra monospace */
+    color: #8B0000; /* Rojo oscuro para subtítulos de criptografía */
+    margin-top: 20px; /* Espacio superior */
+    animation: fadeIn 1s forwards; /* Aplica animación */
+    animation-delay: 0.6s; /* Retardo para subtítulos de criptografía */
+}
+
+/* Texto descriptivo */
+p {
+    font-size: 18px;
+    color: #333; /* Texto en gris oscuro para mejor legibilidad */
+    line-height: 1.6; /* Mejorar la legibilidad */
+    animation: fadeIn 1s forwards; /* Aplica animación */
+    animation-delay: 0.8s; /* Retardo para párrafos */
+}
+
+/* Estilos para los botones */
+.button {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+    color: white; /* Texto en blanco */
+    background-color: #c9302c; /* Rojo intenso */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Botón para descargar la llave pública */
+.btn-public-key {
+    background-color: #0026ff; /* Azul más fuerte */
+}
+
+/* Efecto hover en los botones */
+.button:hover {
+    background-color: #faf204; /* Rojo más oscuro */
+    transform: translateY(-5px) scale(1.05); /* Eleva y aumenta el tamaño */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    animation: pulse 0.6s infinite; /* Efecto de pulso */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Estilos para las imágenes de la fotografía */
+.profile-photo {
+    width: 150px; /* Ancho más pequeño para la fotografía */
+    height: auto; /* Mantener la proporción */
+    border: 3px solid #b30000; /* Borde rojo fuerte */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.5s ease, border-color 0.5s ease; /* Transiciones suaves */
+}
+
+.profile-photo:hover {
+    transform: scale(1.1) rotate(5deg); /* Aumenta y rota al pasar el cursor */
+    border-color: #ff0000; /* Cambia el color del borde */
+}
+
+/* Estilos para las imágenes de hobbies */
+.hobbies {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se envuelvan */
+    justify-content: center; /* Centrar imágenes */
+    margin-top: 30px;
+}
+
+.hobby-item {
+    margin: 20px; /* Espaciado entre los elementos de hobbies */
+    flex: 1 1 200px; /* Tamaño flexible para cada hobby */
+    max-width: 250px; /* Ancho máximo */
+    text-align: center; /* Centrar texto */
+    animation: fadeIn 1s forwards; /* Aplica animación */
+}
+
+.hobby-image {
+    width: 100%; /* Ajustar al ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.5s ease, filter 0.5s ease; /* Transición suave */
+}
+
+.hobby-image:hover {
+    transform: scale(1.1) rotate(5deg); /* Aumenta y rota al pasar el cursor */
+    filter: brightness(1.2); /* Aumenta el brillo */
+}
+
+/* Estilos para las imágenes en la sección de criptografía */
+.crypto-image {
+    width: 300px; /* Ajusta el tamaño de las imágenes */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px 0; /* Espaciado vertical */
+    transition: transform 0.5s ease; /* Transición suave */
+}
+
+.crypto-image:hover {
+    transform: scale(1.1) rotate(-5deg); /* Aumenta y rota al pasar el cursor */
+    filter: sepia(0.2); /* Efecto sepia al pasar el cursor */
+}
+
+/* Sección de criptografía */
+.cryptography-section {
+    margin-top: 30px; /* Espacio entre secciones */
+}
+
+/* Pie de página */
+footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #888; /* Color gris para el pie de página */
+    animation: fadeIn 1s forwards; /* Aplica animación */
+    animation-delay: 1s; /* Retardo para pie de página */
+}
